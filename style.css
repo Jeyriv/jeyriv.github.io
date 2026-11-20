@@ -1,0 +1,63 @@
+:root {
+  color-scheme: light;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #25252d;
+  background: #faf9f6;
+  line-height: 1.7;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: #493b86; text-underline-offset: 0.2em; }
+a:hover { color: #29204e; }
+a:focus-visible { outline: 3px solid #7865bc; outline-offset: 5px; }
+
+.site-header,
+main,
+footer {
+  width: min(100% - 3rem, 48rem);
+  margin-inline: auto;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding-block: 2rem;
+  border-bottom: 1px solid #e1ded6;
+}
+
+.brand { font-weight: 750; text-decoration: none; color: #25252d; }
+nav { font-size: 0.9rem; }
+main { padding-block: 3.5rem 2rem; }
+.eyebrow { color: #5b5272; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+h1 { max-width: 19ch; font-size: clamp(2rem, 5.5vw, 3rem); line-height: 1.16; letter-spacing: -0.035em; margin-block: 0.6rem 1.6rem; }
+h2 { font-size: 1.2rem; line-height: 1.4; margin-block: 0 0.8rem; }
+p { margin-block: 0 1rem; }
+.lead { font-size: 1.15rem; color: #44424f; }
+.updated { color: #686571; font-size: 0.9rem; }
+section { margin-top: 2.6rem; }
+ul { padding-left: 1.4rem; }
+li { padding-left: 0.2rem; margin-bottom: 0.55rem; }
+code { overflow-wrap: anywhere; font-size: 0.9em; background: #efedf5; padding: 0.1rem 0.3rem; border-radius: 0.2rem; }
+.notice { margin-top: 2.6rem; padding: 1.5rem; background: #efedf5; border-left: 3px solid #7865bc; border-radius: 0 0.5rem 0.5rem 0; }
+.notice p:last-child { margin-bottom: 0; }
+footer { border-top: 1px solid #e1ded6; padding-block: 1.5rem 2.5rem; color: #686571; font-size: 0.85rem; }
+
+@media (max-width: 480px) {
+  .site-header, main, footer { width: calc(100% - 2rem); }
+  .site-header { flex-wrap: wrap; padding-block: 1.2rem; }
+  main { padding-top: 2.5rem; }
+  .notice { padding: 1.1rem; }
+}
+
+@media print {
+  :root { background: white; color: black; }
+  main { padding-top: 1rem; }
+  .notice { background: transparent; }
+  a { color: inherit; }
+  section { break-inside: avoid; }
+}
